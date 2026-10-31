@@ -27,7 +27,9 @@ jobs:
           CHECK_KEY: ${{ secrets.CHECK_KEY }}
           CHECK_CONCURRENCY: "16"
           CHECK_TIMEOUT: "30"
-          HOSTS_ENTRY: "markmonitor.com:443,www.sage.com:443,egov.uscis.gov:443,spring.io:443,staticdelivery.nexusmods.com:443,www.gov.il:443,prizepicks.com:443,guide.for.edu.sg:443,www.carousell.sg:443,53.fs1.hubspotusercontent-na1.net:443,www.wto.org:443,constitution.congress.gov:443,funko.com:443,www.dbs.com.sg:443,jobsdb.com:443,www.dentoncounty.gov:443,www.sofi.com:443,www.broadcom.com:443,uspto.gov:443,www.zendesk.com:443"
+          # 本机从 BestCF 候选列表抽样测速通过，网络变化后应重新测速
+          HOSTS_ENTRY: "www.udacity.com:443,iili.io:443,staticdelivery.nexusmods.com:443,xn--b6gac.eu.org:443,icook.tw:443,openai.com:443,www.wto.org:443,t.213891.xyz:443,gateway.ipfsscan.io:443,missav.ws:443,upfile.live:443,cdn.nodeimage.com:443,www.ntu.edu.sg:443,api.uniapi.io:443,hashi.sbs:443,www.visa.com.hk:443,store.ubi.com:443,gitlab.com:443,singapore.com:443,flightradar24.com:443"
+          OPTIMAL_API: ""
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
