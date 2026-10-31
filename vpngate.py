@@ -333,7 +333,7 @@ def check_one(node, session):
     out["exit"] = None
     out["residential"] = "unknown"
     try:
-        r = session.get(url, timeout=CHECK_TIMEOUT, headers={"User-Agent": "Mozilla/5.0 (gate-checker)"})
+        r = session.get(url, timeout=CHECK_TIMEOUT, allow_redirects=False, headers={"User-Agent": "Mozilla/5.0 (gate-checker)", "x-check-key": os.environ.get("CHECK_KEY", "")})
         if r.status_code != 200:
             out["error"] = f"HTTP {r.status_code}"
             out["worker_error"] = True

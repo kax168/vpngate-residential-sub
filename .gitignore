@@ -3,4 +3,5 @@ public/
 __pycache__/
 *.pyc
 
-Copy
+.private-credentials.json
+checker-upstream.js
